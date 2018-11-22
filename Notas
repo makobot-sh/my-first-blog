@@ -1,0 +1,9 @@
+// Recien empece esto en "Introduccion a HTML"... fail
+// TUTORIAL SEGUIDO: https://argentinaenpython.com/django-girls/tutorial/html/
+
+== GIT ==
+    * git status: ver los cambios hasta ahora
+    * git add --all . :
+    "--all significa que git también reconocerá si has eliminado archivos (por defecto, sólo reconoce archivos nuevos/modificados). También recuerda (del capítulo 3) que . significa el directorio actual."
+    * git commit -m "Mensaje de commit" :
+    Hacer un commit es decir que terminaste de hacer cambios, es medio como cerrar una version de cambios.

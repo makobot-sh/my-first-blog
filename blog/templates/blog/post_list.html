@@ -7,25 +7,13 @@
             <h1><a href="https://www.youtube.com/watch?v=RWeyOyY_puQ">the best mv of mvs</a></h1>
         </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="https://www.youtube.com/watch?v=KAkVaKHfol8">cultura general</a></h2>
-            <p>According to all known laws of aviation,  
-there is no way a bee
-should be able to fly.  
-Its wings are too small to get
-its fat little body off the ground.  
-The bee, of course, flies anyway  
-because bees don't care
-what humans think is impossible.  
-Yellow, black. Yellow, black.
-Yellow, black. Yellow, black.</p>
-        </div>
+        {% for post in posts %}    <!-- for en html/django -->
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p> <!-- convierte saltos de linea en parrafos -->
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="https://www.youtube.com/watch?v=sGRv8ZBLuW0">my boygroup favorito</a></h2>
-            <p>et tu, brute</p>
-        </div>
     </body>
 </html>

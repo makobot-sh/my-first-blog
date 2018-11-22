@@ -13,9 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+# https://docs.djangoproject.com/en/1.11/topics/http/urls/
+
+from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),  # Redirige todo lo que entre a (link)/admin a admin.site.urls
+    url(r'', include('blog.urls')), # Redirige todo lo que entre a (link) a blog.urls
+    #r'' significa expresion regular (regex)
 ]
+
+
+#   ^ denota el principio del texto
+#   $ denota el final del texto
+#   \d representa un dígito
+#   + indica que el ítem anterior debería ser repetido por lo menos una vez
+#  ( ) para encerrar una parte del patrón
